@@ -266,7 +266,7 @@ input:focus {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-right: 8px;
+    margin-left: 8px;
     cursor: pointer;
     transition: 0.2s;
 }
@@ -456,21 +456,14 @@ body.night_mode {
 
     .fixed_area {
         top: auto;
-        bottom: 16px;
-        right: 16px;
+        bottom: 20px;
+        right: 20px;
         flex-direction: column;
     }
 
     .fixed_area .fixed_btn {
-        width: 32px;
-        height: 32px;
         margin-right: 0px;
-        margin-top: 6px;
-    }
-
-    .fixed_area .fixed_btn svg {
-        width: 12px;
-        height: 12px;
+        margin-top: 8px;
     }
 
     .title h1 {
