@@ -118,7 +118,7 @@ input:focus {
 }
 
 .link_converted_btn label {
-    width: 33.3%;
+    width: 33.33%;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -329,11 +329,11 @@ body.bright_mode {
 
 .bright_mode .link_converted_btn {
     border: 1px solid #4C4D50;
+    background-color: #4C4D50;
 }
 
 .bright_mode .link_converted_btn label {
     border-right: 1px solid #35363A;
-    background-color: #4C4D50;
     color: #FFFFFF;
 }
 
