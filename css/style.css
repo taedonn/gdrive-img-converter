@@ -91,6 +91,7 @@ input:focus {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-bottom: 40px;
 }
 
 .link_converted_btn {
@@ -147,5 +148,45 @@ input:focus {
     font-size: 14px;
     border-radius: 0 0 8px 8px;
     padding: 16px;
+    padding-right: 56px;
     color: #202124;   
+}
+
+.link_copy {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 20px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.link_copy svg {
+    width: 16px;
+    height: 16px;
+}
+
+.link_copy .copy_check_btn {
+    display: none;
+}
+
+.img_preview {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.link_img_wrap {
+    width: 280px;
+    padding: 20px;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+}
+
+.link_img_wrap img {
+    width: 100%;
+    border-radius: 8px;
 }

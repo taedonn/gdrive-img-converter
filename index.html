@@ -18,26 +18,62 @@
             </h2>
         </div>
         <div class="link_origin_wrap">
-            <input type="text" placeholder="Paste your link here"/>
-            <button>Convert</button>
+            <input id="link_origin" type="text" placeholder="Paste your link here" onkeydown="linkOriginEnter()"/>
+            <button onclick="linkOriginClick()">Convert</button>
         </div>
         <div class="link_converted_wrap">
             <div class="link_converted_btn">
                 <input type="radio" name="link_converted" id="link_converted_1" onchange="radioOnChange(this)" checked/>
-                <label for="link_converted_1">&lt;/></label>
+                <label for="link_converted_1">https://</label>
                 <input type="radio" name="link_converted" id="link_converted_2" onchange="radioOnChange(this)"/>
-                <label for="link_converted_2">&lt;a/></label>
+                <label for="link_converted_2">&lt;img/></label>
                 <input type="radio" name="link_converted" id="link_converted_3" onchange="radioOnChange(this)"/>
-                <label for="link_converted_3">&lt;img/></label>
+                <label for="link_converted_3">&lt;a/></label>
             </div>
             <div class="link_converted link_converted_1">
-                <input type="text" placeholder="Your link will be generated here"/>
+                <input id="input_converted_1" type="text" placeholder="Your link will be generated here"/>
+                <div class="link_copy link_copy_1" onclick="copyOnClick(this)">
+                    <svg class="copy_btn" xmlns="http://www.w3.org/2000/svg" fill="#202124" viewBox="0 0 16 16">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                    </svg>
+                    <svg class="copy_check_btn" xmlns="http://www.w3.org/2000/svg" fill="#202124" viewBox="0 0 16 16">
+                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                    </svg>
+                </div>
             </div>
             <div class="link_converted link_converted_2">
-                <input type="text" placeholder="Your link will be generated here"/>
+                <input id="input_converted_2" type="text" placeholder="Your link will be generated here"/>
+                <div class="link_copy link_copy_2" onclick="copyOnClick(this)">
+                    <svg class="copy_btn" xmlns="http://www.w3.org/2000/svg" fill="#202124" viewBox="0 0 16 16">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                    </svg>
+                    <svg class="copy_check_btn" xmlns="http://www.w3.org/2000/svg" fill="#202124" viewBox="0 0 16 16">
+                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                    </svg>
+                </div>
             </div>
             <div class="link_converted link_converted_3">
-                <input type="text" placeholder="Your link will be generated here"/>
+                <input id="input_converted_3" type="text" placeholder="Your link will be generated here"/>
+                <div class="link_copy link_copy_3" onclick="copyOnClick(this)">
+                    <svg class="copy_btn" xmlns="http://www.w3.org/2000/svg" fill="#202124" viewBox="0 0 16 16">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                    </svg>
+                    <svg class="copy_check_btn" xmlns="http://www.w3.org/2000/svg" fill="#202124" viewBox="0 0 16 16">
+                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="img_preview">Image Preview</div>
+        <div class="link_img_wrap">
+            <div style="height:240px; display:flex; flex-direction:row; justify-content:center; align-items:center; background-color:#35363A; border-radius:8px;">
+                <svg style="width:50%;" xmlns="http://www.w3.org/2000/svg" fill="#646568" class="bi bi-card-image" viewBox="0 0 16 16">
+                    <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                    <path d="M1.5 2A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13zm13 1a.5.5 0 0 1 .5.5v6l-3.775-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12v.54A.505.505 0 0 1 1 12.5v-9a.5.5 0 0 1 .5-.5h13z"/>
+                </svg>
             </div>
         </div>
     </div>
