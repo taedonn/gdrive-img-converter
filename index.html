@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Drive Image Converter</title>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <script type="text/javascript" src="./js/settings.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="title">
+            <h1>Google Drive Image Converter</h1>
+            <h2>
+                Easily convert Google Drive image into an external link.
+                You can use this link to embed images on your website, email, or blog.
+            </h2>
+        </div>
+        <div class="link_origin_wrap">
+            <input type="text" placeholder="Paste your link here"/>
+            <button>Convert</button>
+        </div>
+        <div class="link_converted_wrap">
+            <div class="link_converted_btn">
+                <input type="radio" name="link_converted" id="link_converted_1" onchange="radioOnChange(this)" checked/>
+                <label for="link_converted_1">&lt;/></label>
+                <input type="radio" name="link_converted" id="link_converted_2" onchange="radioOnChange(this)"/>
+                <label for="link_converted_2">&lt;a/></label>
+                <input type="radio" name="link_converted" id="link_converted_3" onchange="radioOnChange(this)"/>
+                <label for="link_converted_3">&lt;img/></label>
+            </div>
+            <div class="link_converted link_converted_1">
+                <input type="text" placeholder="Your link will be generated here"/>
+            </div>
+            <div class="link_converted link_converted_2">
+                <input type="text" placeholder="Your link will be generated here"/>
+            </div>
+            <div class="link_converted link_converted_3">
+                <input type="text" placeholder="Your link will be generated here"/>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
