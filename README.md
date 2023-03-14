@@ -2,6 +2,8 @@
 
 Live Demo : https://taedonn.github.io/gdrive-img-converter
 
+[![HTML5](https://img.shields.io/badge/featured%20on-HTML5-%23ec6231)](#)
+
 &nbsp;
 
 ## How to use 
