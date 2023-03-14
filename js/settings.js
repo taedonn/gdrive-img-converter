@@ -36,3 +36,9 @@ function copyOnClick(thisBtn) {
         document.getElementsByClassName('link_converted' + copyBtnId)[0].getElementsByClassName('copy_btn')[0].style.display = 'block';
     },1500);
 }
+
+function colorModeOnClick() {
+    let body = document.getElementsByTagName('body');
+    if(body[0].classList.contains('bright_mode')) { body[0].classList.replace('bright_mode','night_mode'); }
+    else { body[0].classList.replace('night_mode','bright_mode'); }
+}

@@ -8,8 +8,20 @@
     <link rel="stylesheet" href="./css/style.css"/>
     <script type="text/javascript" src="./js/settings.js"></script>
 </head>
-<body>
+<body class="bright_mode">
     <div id="wrap">
+        <div class="fixed_area">
+            <a class="fixed_btn" href="https://github.com/taedonn/gdrive-img-converter" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+            </a>
+            <div class="fixed_btn color_mode_btn" onclick="colorModeOnClick()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+                </svg>
+            </div>
+        </div>
         <div class="title">
             <h1>Google Drive Image Converter</h1>
             <h2>
@@ -69,13 +81,36 @@
         </div>
         <div class="img_preview">Image Preview</div>
         <div class="link_img_wrap">
-            <div style="height:240px; display:flex; flex-direction:row; justify-content:center; align-items:center; background-color:#35363A; border-radius:8px;">
-                <svg style="width:50%;" xmlns="http://www.w3.org/2000/svg" fill="#646568" class="bi bi-card-image" viewBox="0 0 16 16">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                     <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
                     <path d="M1.5 2A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13zm13 1a.5.5 0 0 1 .5.5v6l-3.775-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12v.54A.505.505 0 0 1 1 12.5v-9a.5.5 0 0 1 .5-.5h13z"/>
                 </svg>
             </div>
         </div>
+        <div class="how_to_use">
+            <h2>
+                How to Use
+                <svg xmlns:xlink="&ns_xlink;" viewBox="0 0 531.74 460.5" enable-background="new 0 0 531.74 460.5" xml:space="preserve">
+                    <polygon points="530.874,0.5 265.87,459.5 0.866,0.5 "/>
+                </svg>
+            </h2>
+            <h3>1. Upload your image to Google Drive.</h3>
+            <img src="./img/how_to_use_1.jpg"/>
+            <h3>2. Right click on your image and click 'Get link'.</h3>
+            <img src="./img/how_to_use_2.jpg"/>
+            <h3>3. Change general access from 'Restricted' to 'Anyone with the link'.</h3>
+            <img src="./img/how_to_use_3.jpg"/>
+            <h3>4. click on 'Copy link' button to get the url of the image.</h3>
+            <img src="./img/how_to_use_4.jpg"/>
+            <h3>5. Paste the url here and get external link.</h3>
+            <img src="./img/how_to_use_5.jpg" style="border:1px solid #646568;"/>
+        </div>
+        <div class="copyright"></div>
+        <script>
+            document.getElementsByClassName('copyright')[0].innerText += 'Copyright ' + new Date().getFullYear() + '. taedonn, all rights reserved.';
+            document.getElementsByClassName('copyright')[0].innerHTML += '<a href="https://github.com/taedonn/gdrive-img-converter" target="_blank">Check this repository on GitHub</a>';
+        </script>
     </div>
 </body>
 </html>

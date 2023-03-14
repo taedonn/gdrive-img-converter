@@ -9,12 +9,15 @@
 }
 
 body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
     font-family: "Noto Sans KR";
     font-size: 16px;
     font-weight: 400;
     line-height: 1.25;
-    color: #FFFFFF;
-    background-color: #202124;
+    transition: 0.2s;
 }
 
 input, button {
@@ -26,9 +29,10 @@ input:focus {
 }
 
 #wrap {
-    width: 100%;
+    width: 572px;
     min-height: 100vh;
     padding: 80px 0;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -48,6 +52,7 @@ input:focus {
     font-weight: 700;
     text-align: center;
     margin-bottom: 12px;
+    transition: 0.2s;
 }
 
 .title h2 {
@@ -56,7 +61,7 @@ input:focus {
     font-weight: 300;
     line-height: 1.5;
     text-align: center;
-    color: #9AA0A6;
+    transition: 0.2s;
 }
 
 .link_origin_wrap {
@@ -70,9 +75,11 @@ input:focus {
 .link_origin_wrap input {
     width: 460px;
     font-size: 14px;
+    border: 1px solid;
     border-radius: 8px 0 0 8px;
-    padding: 16px;
+    padding: 15px 16px;
     color: #202124;
+    transition: 0.2s;
 }
 
 .link_origin_wrap button {
@@ -80,13 +87,12 @@ input:focus {
     height: 48px;
     font-size: 14px;
     border-radius: 0 8px 8px 0;
-    color: #FFFFFF;
-    background-color: #35363A;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .link_converted_wrap {
-    width: 572px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -98,13 +104,13 @@ input:focus {
     width: 100%;
     height: 48px;
     border-radius: 8px 8px 0 0;
-    border: 1px solid #35363A;
     border-bottom: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
+    transition: 0.2s;
 }
 
 .link_converted_btn input {
@@ -114,7 +120,6 @@ input:focus {
 .link_converted_btn label {
     width: 33.3%;
     height: 100%;
-    border-right: 1px solid #35363A;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -123,14 +128,11 @@ input:focus {
     font-weight: 300;
     text-align: center;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .link_converted_btn label:last-of-type {
     border-right: none;
-}
-
-.link_converted_btn input:checked + label {
-    background-color: #35363A;
 }
 
 .link_converted {
@@ -146,21 +148,24 @@ input:focus {
 .link_converted input {
     width: 100%;
     font-size: 14px;
+    border-top: none;
     border-radius: 0 0 8px 8px;
     padding: 16px;
-    padding-right: 56px;
-    color: #202124;   
+    padding-right: 57px;
+    color: #202124;
+    transition: 0.2s;
 }
 
 .link_copy {
     position: absolute;
     z-index: 2;
-    right: 0;
+    right: 1px;
     top: 50%;
     transform: translateY(-50%);
     padding: 0 20px;
     background-color: #FFFFFF;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .link_copy svg {
@@ -182,11 +187,305 @@ input:focus {
 .link_img_wrap {
     width: 280px;
     padding: 20px;
-    border: 1px solid #FFFFFF;
     border-radius: 8px;
+    margin-bottom: 80px;
+    transition: 0.2s;
 }
 
 .link_img_wrap img {
     width: 100%;
     border-radius: 8px;
+}
+
+.link_img_wrap div {
+    height: 240px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.link_img_wrap svg {
+    width: 50%;
+    transition: 0.2s;
+}
+
+.how_to_use {
+    width: 100%;
+}
+
+.how_to_use h2 {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 12px;
+    margin-bottom: 40px;
+    transition: 0.2s;
+}
+
+.how_to_use h2 svg {
+    width: 12px;
+    height: 12px;
+    margin-left: 6px;
+    transition: 0.2s;
+}
+
+.how_to_use h3 {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+    margin-bottom: 16px;
+}
+
+.how_to_use img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+/* 플로팅 버튼 */
+
+.fixed_area {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.fixed_area .fixed_btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.fixed_area .fixed_btn svg {
+    width: 16px;
+    height: 16px;
+    transition: 0.2s;
+}
+
+/* 저작권 */
+
+.copyright {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    transform: translateY(100%);
+}
+
+/* 브라잇 모드 */
+
+body.bright_mode {
+    color: #4C4D50;
+    background-color: #E9EAEE;
+}
+
+.bright_mode .copyright, .bright_mode a, .bright_mode a:active {
+    color: #646568;
+}
+
+.bright_mode .fixed_area .fixed_btn {
+    background-color: #35363A;
+}
+
+.bright_mode .fixed_area .fixed_btn svg {
+    fill: #FFFFFF;
+}
+
+.bright_mode .title h1 {
+    color: #35363A;
+}
+
+.bright_mode .title h2 {
+    color: #646568;
+}
+
+.bright_mode .link_origin_wrap input {
+    border-color: #4C4D50;
+}
+
+.bright_mode .link_origin_wrap button {
+    color: #FFFFFF;
+    background-color: #4C4D50;
+}
+
+.bright_mode .link_converted_btn {
+    border: 1px solid #4C4D50;
+}
+
+.bright_mode .link_converted_btn label {
+    border-right: 1px solid #35363A;
+    background-color: #4C4D50;
+    color: #FFFFFF;
+}
+
+.bright_mode .link_converted_btn label:last-of-type {
+    border-right: none;
+}
+
+.bright_mode .link_converted_btn input:checked + label {
+    background-color: #35363A;
+}
+
+.bright_mode .link_converted input {
+    border: 1px solid #4C4D50;
+}
+
+.bright_mode .link_img_wrap {
+    border: 1px solid #4C4D50;
+    background-color: #FFFFFF;
+}
+
+.bright_mode .link_img_wrap div {
+    background-color: #E9EAEE;
+}
+
+.bright_mode .link_img_wrap svg {
+    fill: #CDCED2;
+}
+
+.bright_mode .how_to_use h2 {
+    border-bottom: 1px solid #4C4D50;
+}
+
+.bright_mode .how_to_use h2 svg {
+    fill: #4C4D50;
+}
+
+/* 나잇 모드 */
+
+body.night_mode {
+    color: #FFFFFF;
+    background-color: #202124;
+}
+
+.night_mode .copyright, .night_mode a, .night_mode a:active {
+    color: #9AA0A6;
+}
+
+.night_mode .fixed_area .fixed_btn {
+    background-color: #FFFFFF;
+}
+
+.night_mode .fixed_area .fixed_btn svg {
+    fill: #202124;
+}
+
+.night_mode .title h2 {
+    color: #9AA0A6;
+}
+
+.night_mode .link_origin_wrap button {
+    color: #FFFFFF;
+    background-color: #35363A;
+}
+
+.night_mode .link_origin_wrap input {
+    border-color: #FFFFFF;
+}
+
+
+.night_mode .link_converted_btn {
+    border: 1px solid #35363A;
+}
+
+.night_mode .link_converted_btn label {
+    border-right: 1px solid #35363A;
+    color: #FFFFFF;
+}
+
+.night_mode .link_converted_btn label:last-of-type {
+    border-right: none;
+}
+
+.night_mode .link_converted_btn input:checked + label {
+    background-color: #35363A;
+}
+
+.night_mode .link_converted input {
+    border: 1px solid #FFFFFF;
+}
+
+.night_mode .link_img_wrap {
+    border: 1px solid #FFFFFF;
+}
+
+.night_mode .link_img_wrap div {
+    background-color: #35363A;
+}
+
+.night_mode .link_img_wrap svg {
+    fill: #646569;
+}
+
+.night_mode .how_to_use h2 {
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.night_mode .how_to_use h2 svg {
+    fill: #FFFFFF;
+}
+
+.night_mode .how_to_use h3 {
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 720px) {
+    #wrap {
+        width: 100%;
+        padding: 60px 20px;
+    }
+
+    .fixed_area {
+        top: auto;
+        bottom: 16px;
+        right: 16px;
+        flex-direction: column;
+    }
+
+    .fixed_area .fixed_btn {
+        width: 32px;
+        height: 32px;
+        margin-right: 0px;
+        margin-top: 6px;
+    }
+
+    .fixed_area .fixed_btn svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .title h1 {
+        width: 100%;
+    }
+
+    .title h2 {
+        width: 100%;
+    }
+
+    .link_origin_wrap {
+        width: 100%;
+    }
+
+    .link_origin_wrap input {
+        width: 100%;
+    }
 }
