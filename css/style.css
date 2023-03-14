@@ -405,6 +405,7 @@ body.night_mode {
 
 .night_mode .link_converted_btn {
     border: 1px solid #35363A;
+    background-color: #202124;
 }
 
 .night_mode .link_converted_btn label {
@@ -426,6 +427,7 @@ body.night_mode {
 
 .night_mode .link_img_wrap {
     border: 1px solid #FFFFFF;
+    background-color: #202124;
 }
 
 .night_mode .link_img_wrap div {
