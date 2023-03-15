@@ -1,4 +1,4 @@
-# Google Drive Image Converte
+# Google Drive Image Converter
 
 Live Demo : https://taedonn.github.io/gdrive-img-converter
 
