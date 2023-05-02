@@ -6,7 +6,7 @@ Live Demo : https://gdrive-img-converter.taedonn.com/
 
 &nbsp;
 
-## How to use 
+## How to use
 
 #### 1. Upload your image to Google Drive.
 
